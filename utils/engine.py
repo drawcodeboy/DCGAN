@@ -5,7 +5,6 @@ import numpy as np
 import pdb
 import random
 
-from .metrics import get_metrics
 from .loss_process import adversarial_process
 
 def train_one_epoch(model, dataloader, loss_fn, optimizer, scheduler, task_cfg, device):

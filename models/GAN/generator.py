@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+import torch.nn.functional as F
 
 class Generator(nn.Module):
     def __init__(self,
@@ -18,6 +19,6 @@ class Generator(nn.Module):
         z = self.acti(self.li1(z))
         z = self.acti(self.li2(z))
         z = self.acti(self.li3(z))
-        x = self.acti(self.li4(z))
+        x = F.sigmoid(self.li4(z))
         x = x.view(-1, self.img_dim[0], self.img_dim[1], self.img_dim[2])
         return x

@@ -21,8 +21,8 @@ model:
 hyperparameters:
   optim: SGD
   momentum: 0.9
-  gen_lr: 0.001
-  disc_lr: 0.001
+  gen_lr: 0.0001
+  disc_lr: 0.00005
   epochs: 200
   batch_size: 32
   loss_fn: BCE

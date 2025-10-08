@@ -3,3 +3,5 @@ torch==2.7.1
 torchvision==0.22.1
 
 pyyaml==0.6.3
+opencv-python==4.12.0.88
+einops==0.8.1

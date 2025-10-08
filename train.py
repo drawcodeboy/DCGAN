@@ -105,9 +105,8 @@ def main(cfg):
         # Validation을 따로 하지는 않을 것. 추후에 FID, IS를 고려할 수 있으나, 지금은 생략.
         # val_loss = validate(model, val_dl, loss_fn, scheduler, task_cfg, device) # input args
 
-        # if val_loss < min_loss:
-        #     min_loss = val_loss
-        if current_epoch % 50 == 0:
+        if train_loss[0] < min_loss and current_epoch > 50:
+            min_loss = train_loss[0]
             save_model_ckpt(model, save_cfg['name'], current_epoch, save_cfg['weights_path'])
 
         total_train_loss.append(train_loss)
