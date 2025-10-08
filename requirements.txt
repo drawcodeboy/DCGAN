@@ -1,0 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.7.1
+torchvision==0.22.1
+
+pyyaml==0.6.3

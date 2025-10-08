@@ -17,8 +17,8 @@ class MNIST_Dataset():
         
         self.data=list(self.data)
         
-        train_size = 7000
-        val_size = 1000
+        train_size = 8000
+        val_size = 0
         test_size = 2000
         
         if mode == 'train':
@@ -41,6 +41,7 @@ class MNIST_Dataset():
         
         return image
     
+    @classmethod
     def from_config(cls, cfg):
         return cls(root=cfg.get('root', 'data/'),
                    download=cfg.get('download', True),
